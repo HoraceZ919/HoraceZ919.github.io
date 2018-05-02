@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <meta charset="UTF-8">
+  <title>Zuoye</title>
 </head>
 <body>
   <div id="content1">
-    <h1>Lorem.</h1>
-    <h2>Lorem ipsum.</h2>
-    <h3>Lorem ipsum dolor.</h3>
+    <hgroup>
+      <h1>Lorem.</h1>
+      <h2>Lorem ipsum.</h2>
+      <h3>Lorem ipsum dolor.</h3>
+    </hgroup>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id maxime corrupti, nulla earum possimus vitae omnis odio pariatur officia! Odit ipsa alias labore nostrum sint ex non repellendus, doloremque et.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit quaerat sint commodi est itaque vero, incidunt, quisquam obcaecati iusto minus inventore voluptatum. Consequuntur, at sequi ut nihil fugit amet possimus.</p>
     <p>
@@ -19,15 +22,22 @@
       <img src="https://drscdn.500px.org/photo/229389427/m%3D1170/v2?user_id=7012987&webp=true&sig=196fa0c161aa562478d08571764872f7d69a346c3c0b2e12aa00e2c6414eb28b" alt="" title="图片描述" width="200" height="200">
     </p>
   </div>
-      <hr><hr>
+      <hr>
+      <hr>
   <div id="content2">
       <marquee behavior="scroll" direction="left">飘~~~</marquee>
-      <i>这几种强调</i> <b>有什么 区别呢？</b> <u>这个呢？</u> <i>这个呢？</i>
-    <p>html的注释怎么写？</p>
-    <p>下面是一段javascript代码，最合适用何种标签表示呢？</p>
-    <pre>      <code>function a(){
-        return 8
-      }</code>
+      <em>这几种强调</em> 
+      <b>有什么 区别呢？</b> 
+      <u>这个呢？</u> 
+      <i>这个呢？</i>
+      <p>html的注释怎么写？</p>
+      <p>下面是一段javascript代码，最合适用何种标签表示呢？</p>
+    <pre>
+      <code lang="js">
+        function a(){
+          return 8
+        }
+      </code>
 
     </pre>
       <hr>
@@ -170,12 +180,12 @@
       <area shape="poly" coords="60,80,10,260,160,400,230,260,190,90" href="" alt="">
     </map>
   <hr>
-  <div id="bottom">
+  <div id="frame">
 
   </div>
-  <a href="https://www.mi.com" target="frame1">点击我会在下面的frame里打开小米商场，但为什么打不开呢？</a>
+  <a href="https://www.mi.com" target="frame">点击我会在下面的frame里打开小米商场，但为什么打不开呢？</a>
   <br>
-  <iframe src="https://nodejs.org" name="frame1" frameborder="1"></iframe>
+  <iframe src="https://nodejs.org" name="frame" frameborder="1"></iframe>
 
   <div>
     怎样&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在这两个字之间空这么大呢？
@@ -184,6 +194,6 @@
     <br>
     &lt;span>&lt;/span>
   </div>
-
+<span id="bottom"></span>
 </body>
 </html>
