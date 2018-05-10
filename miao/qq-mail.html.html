@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    html,body{
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin:0;
+      box-sizing: border-box;
+    }
+    .top{
+      height:100px;
+      xborder:2px solid;
+      background: red;
+    }
+    .left{
+      height: calc(100% - 100px);
+      width: 220px;
+      background: green;
+      float:left;
+    }
+    .right{
+      height: calc(100% - 100px);
+      width: calc(100% - 220px);
+      background: blue;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+    <div class="top"></div>
+    <div class="right"></div>
+    <div class="left"></div>
+    
+</body>
+</html>
