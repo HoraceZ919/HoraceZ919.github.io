@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    /*下面的距离不会调，算的总是有误差，最后一格一格调的。先提交上来，我再慢慢改*/
+    .top{
+      background-color: black;
+      color: white;
+      padding-left: calc(50% - 300px);
+      padding-right: calc(50% - 300px)
+    }
+    main{
+      width:600px;
+      margin:auto;
+      box-sizing: border-box;
+    }
+    .content{
+      margin-bottom: 15px;
+    }
+    ul.cheek>li{
+      width: 180px;
+      height: 40px;
+      background: pink;
+      list-style-type: none;
+      padding: 0;
+      border: 3px solid;
+      margin-top: 15px;
+      margin-left: -42px;
+    }
+    ul.cheek>li:hover{
+      background: red;
+    }
+    ul.cheek>li:nth-child(n+5){
+      margin-left: 168px;
+    }
+    ul.cheek>li:nth-child(n+9){
+      margin-left: 378px;
+    }
+    ul.cheek>li:nth-child(4n+5){
+      margin-top:-229px;
+    }
+    ul.link>li{
+      border-bottom: 1px dotted;
+      margin-left: -42px;
+      list-style-type: none;
+    }
+    .bottom{
+      background-color:  violet;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <p>hello world 请调整浏览器窗口大小查看效果</p>
+  </div>
+  <main>
+    <div class="content">
+      页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+    </div>
+    <ul class="cheek">
+      <li>宽180高40(包含边框)</li>
+      <li>水平间隙30px</li>
+      <li>垂直间隙15px</li>
+      <li>边框宽度3px</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+    </ul>
+    <ul class=link>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+    </ul>
+  </main>
+  <div class="bottom">
+    ©版权所有<br>本页所有布局均使用块元素
+  </div>
+</body>
+</html>
