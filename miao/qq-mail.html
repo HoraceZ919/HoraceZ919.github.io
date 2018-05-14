@@ -13,27 +13,28 @@
     }
     .top{
       height:100px;
-      xborder:2px solid;
-      background: red;
+      border-bottom:2px solid;
+      box-sizing: border-box;
     }
     .left{
       height: calc(100% - 100px);
       width: 220px;
-      background: green;
+      box-sizing: border-box;
       float:left;
+      border-right:2px solid;
     }
     .right{
       height: calc(100% - 100px);
       width: calc(100% - 220px);
-      background: blue;
+      box-sizing: border-box;
       float: right;
     }
   </style>
 </head>
 <body>
-    <div class="top"></div>
-    <div class="right"></div>
-    <div class="left"></div>
+    <div class="top">上</div>
+    <div class="right">右</div>
+    <div class="left">左</div>
     
 </body>
 </html>
