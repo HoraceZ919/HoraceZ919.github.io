@@ -4,6 +4,9 @@
   <title>小米商城 - 小米8、小米MIX 2S、红米5 Plus、小米电视官方网站</title>
   <meta charset="UTF-8">
   <style>
+    *{
+      background-color: rgba(0,0,0,0.1);
+    }
     html{
       overflow: scroll;
     }
@@ -50,9 +53,24 @@
     /*导航栏*/
     .nav{
       height: 100px;
-      background-color: red;
       margin: 0 17.68%;
     }
+    ul{
+      list-style: none;
+    }
+    .nav-list1>ul li{
+      display: inline-block;
+      position: relative;
+      white-space: nowrap;
+      padding-right: 15px;
+    }
+    .nav-list1>ul ul li{
+      display: none;
+    }
+    .nav-list1 li:hover>ul>li{
+      display: inline-block;
+    }
+    /**/
   </style>
 </head>
 <body>
@@ -86,7 +104,40 @@
     </div>
   </div>
   <div class="nav">
-    
+    <div class="nav-list1">
+      <ul>
+        <li>小米手机
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+          </ul>
+        </li>
+        <li>红米
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+          </ul>
+        </li>
+        <li>电视</li>
+        <li>笔记本</li>
+        <li>盒子</li>
+        <li>新品</li>
+        <li>路由器</li>
+        <li>智能硬件</li>
+        <li>服务</li>
+        <li>社区</li>
+      </ul>
+    </div>
+  </div>
+  <div class="home-container">
+    <div></div>
   </div>
 </body>
 </html>
