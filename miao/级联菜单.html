@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>级联菜单</title>
+  <meta charset="UTF-8">
+  <style>
+    *{
+      background-color: rgba(0,0,0,0.1);
+    }
+    ul{
+      list-style: none;
+      padding: 0;
+      margin:0;
+      xfont-size: 50px;
+    }
+    li{
+      position: relative;
+      white-space: nowrap;
+      padding-right: 15px;
+    }
+    li:hover{
+      background-color: orange;
+    }
+    ul.menu>li{
+      display: inline-block;
+    }
+    ul ul li{
+      display: none;
+    }
+    ul ul{
+      position: absolute;
+      left: 0;
+      top: 100%;
+    }
+    ul ul ul{
+      top:0;
+      left: 100%;
+    }
+    li:hover>ul>li{
+      display: block;
+    }
+    ul ul ul::before{
+      content: ">";
+      position:absolute;
+      right: 100%;
+
+    }
+  </style>
+</head>
+<body>
+  <ul class="menu">
+    <li>文件
+      <ul>
+        <li>按编码保存为
+          <ul>
+            <li>UTF
+              <ul>
+                <li>UTF-8</li>
+                <li>UTF-8 with BOM</li>
+                <li>UTF-16</li>
+              </ul>
+            </li>
+            <li>Western
+                <ul>
+                <li>Windows</li>
+                <li>Mac</li>
+                <li>ISO</li>
+              </ul>
+            </li>
+            <li>DOS</li>
+          </ul>
+        </li>
+        <li>新建窗口</li>
+        <li>打开文件</li>
+      </ul>
+    </li>
+    <li>编辑</li>
+    <li>帮助</li>
+  </ul>
+</body>
+</html>

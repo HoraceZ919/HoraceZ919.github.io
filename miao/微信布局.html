@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <style>
+    xdiv{
+      width: 500px;
+      height: 500px;
+      border: 1px solid;
+    }
+    li{
+      list-style: none;
+      width: 100px;
+      height: 100px;
+      margin: 15px;
+      border: 1px solid;
+      float: left;
+    }
+    li:first-child:nth-last-child(n + 4)~li:nth-child(3){
+      clear: both;
+      background-color: red;
+    }
+    /*4个元素的时候，第3个元素换行*/
+    li:first-child:nth-last-child(n + 5)~li:nth-child(3){
+      clear: none;
+    }
+    li:first-child:nth-last-child(n + 5)~li:nth-child(4){
+      clear: both;
+      background-color: blue;
+    }
+    /*5个元素的时候，第3个元素不换行，第4个元素换行*/
+    li:first-child:nth-last-child(n + 7)~li:nth-child(7){
+      clear: both;
+      background-color: green;
+    }
+    /*7个元素时，第7个元素换行*/
+  </style>
+</head>
+<body>
+  <div>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+    </ul>
+  </div>
+</body>
+</html>
