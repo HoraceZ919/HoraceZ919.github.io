@@ -58,7 +58,10 @@
     ul{
       list-style: none;
     }
-    .nav-list1>ul li{
+    .nav-list1{
+      margin-left: 200px;
+    }
+    .nav-list1 li{
       display: inline-block;
       position: relative;
       white-space: nowrap;
@@ -67,8 +70,16 @@
     .nav-list1>ul ul li{
       display: none;
     }
+    .nav-list1 li:hover{
+      color: orange;
+    }
     .nav-list1 li:hover>ul>li{
       display: inline-block;
+    }
+    .nav-list1>ul ul{
+      position: absolute;
+      top: 100%;
+      left: -100px;
     }
     /**/
   </style>
@@ -108,7 +119,9 @@
       <ul>
         <li>小米手机
           <ul>
-            <li>1</li>
+            <li>
+              <div class="nav-list1-first-first">1</div>
+            </li>
             <li>2</li>
             <li>3</li>
             <li>4</li>
