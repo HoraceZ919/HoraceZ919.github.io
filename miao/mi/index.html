@@ -4,9 +4,9 @@
   <title>小米商城 - 小米8、小米MIX 2S、红米5 Plus、小米电视官方网站</title>
   <meta charset="UTF-8">
   <style>
-    *{
+    /**{
       background-color: rgba(0,0,0,0.1);
-    }
+    }*/
     html{
       overflow: scroll;
     }
@@ -50,7 +50,20 @@
       padding: 0.2em;
       color:#424242;
     }
-    /*导航栏*/
+    .toparight{
+      float: right;
+      padding: 0 5px;
+    }
+    .buy{
+      padding: 0 50px;
+      position: relative;
+    }
+    .buycar{
+      width: 15px;
+      margin-right: 10px;
+      filter: invert(100%)
+    }
+    /*导航栏1*/
     .nav{
       height: 100px;
       margin: 0 17.68%;
@@ -60,6 +73,7 @@
     }
     .nav-list1{
       margin-left: 200px;
+      line-height: 80px;
     }
     .nav-list1 li{
       display: inline-block;
@@ -81,14 +95,72 @@
       top: 100%;
       left: -100px;
     }
-    /**/
+    .nav-list1-first-first{
+      display: block;
+    }
+    /*导航栏2*/
+    .nav-list2{
+      margin-top: 20px;
+      width: 19%;
+      height: 460px;
+      color: white;
+      background-color: rgba(0,0,0,.3);
+      cursor: pointer;
+    }
+    .nav-list2 li{
+      position: relative;
+      white-space: nowrap;
+      padding-top: 22px;
+      z-index: 1;
+    }
+    .nav-list2>ul ul li{
+      display: none;
+    }
+    .nav-list2 li:hover{
+      background-color: orange;
+    }
+    .nav-list2 li:hover>ul>li{
+      display: inline-block;
+    }
+    .nav-list2>ul ul{
+      position: absolute;
+      top: 0;
+      left: 100px;
+    }
+    .nav-list2-first-first{
+      display: block;
+    }
+    /*背景图片*/
+    .bgi{
+      height: 460px;
+      margin: 0 17.68%;
+      position: relative;
+      overflow: hidden;
+      line-height: 850px;
+      text-align: right;
+      vertical-align: sub;
+    }
+    .bgi img{
+      height: 460px;
+      position: absolute;
+      left: 0%;
+      visibility: hidden;
+      transition: visibility .5s;
+      z-index: -1;
+    }
+    .s1{
+      visibility: visible !important;
+    }
+    .bgi input:checked + * + * + * + * + * + img{
+      visibility: visible;
+    }
   </style>
 </head>
 <body>
   <div class="header"></div>
   <div class="top">
     <div class="topcontent">
-      <a href="" class="topa topaleft">小米商城</a>
+      <a href="" class="topa">小米商城</a>
       <span>|</span>
       <a href="" class="topa">MIUI</a>
       <span>|</span>
@@ -105,13 +177,12 @@
       <a href="" class="topa">政企服务</a>
       <span>|</span>
       <a href="" class="topa">Select Region</a>
-      <a href="" class="topa toparight">登录</a>
-      <span>|</span>
-      <a href="" class="topa toparight">注册</a>
-      <span>|</span>
+      <a href="" class="topa toparight buy"><img src="image/cart.png" alt="" class="buycar">购物车</a>
       <a href="" class="topa toparight">消息通知</a>
-      <span>|</span>
-      <a href="" class="topa toparight">购物车</a>
+      <span class="topa toparight">|</span>
+      <a href="" class="topa toparight">注册</a>
+      <span class="topa toparight">|</span>
+      <a href="" class="topa toparight">登录</a>
     </div>
   </div>
   <div class="nav">
@@ -119,9 +190,7 @@
       <ul>
         <li>小米手机
           <ul>
-            <li>
-              <div class="nav-list1-first-first">1</div>
-            </li>
+            <li>1</li>
             <li>2</li>
             <li>3</li>
             <li>4</li>
@@ -148,9 +217,51 @@
         <li>社区</li>
       </ul>
     </div>
+    <div class="nav-list2">
+      <ul>
+        <li>手机 电话卡
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+          </ul>
+        </li>
+        <li>电视 盒子
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+          </ul>
+        </li>
+        <li>笔记本</li>
+        <li>智能 家电</li>
+        <li>健康 家居</li>
+        <li>出行 儿童</li>
+        <li>路由器 手机配件</li>
+        <li>移动电源 插线板</li>
+        <li>耳机 音箱</li>
+        <li>生活 米兔</li>
+      </ul>
+    </div>
   </div>
-  <div class="home-container">
-    <div></div>
+  <div class="bgi">
+    <input type="radio" name="slider">
+    <input type="radio" name="slider">
+    <input type="radio" name="slider">
+    <input type="radio" name="slider">
+    <input type="radio" name="slider">
+    <input type="radio" name="slider">
+    <img src="image/xmad_1524812978034_RMGmC.jpg" alt="" class="s1">
+    <img src="image/xmad_15246478201362_kKxQF.jpg" alt="">
+    <img src="image/xmad_15274262596295_yGoBE.jpg" alt="">
+    <img src="image/xmad_15266344889352_UKcQL.jpg" alt="">
+    <img src="image/xmad_15275940680251_EsDvf.jpg" alt="">
+    <img src="image/xmad_15271710497377_HjYWq.jpg" alt="">
   </div>
 </body>
 </html>
