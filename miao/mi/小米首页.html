@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style type="text/less">
+    html{
+      overflow-y: scroll;
+    }
+    body{
+      margin: 0;
+      padding: 0;
+      font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    }
+    .site-bn-bar{
+      background-image: url(image/cms_15288584054214_TmsSl.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 120px;
+      width: 100%;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        span{
+          position: absolute;
+          clip: rect(0 0 0 0);
+          background-color: red;
+        }
+      }
+    }
+    .site-topbar{
+      height: 40px;
+      background-color: #333;
+      .container{
+        width: 1226px;
+        height: 100%;
+        margin: auto;
+        font-size: 12px;
+        .topbartext{
+          line-height: 40px;
+          text-decoration: none;
+          color: #b0b0b0;
+          &:hover{
+            color: white;
+          }
+        }
+        .sep{
+            color: #424242;
+            margin: 0.5em;
+          }
+        >div{
+          display: inline-block;
+        }
+        .topbar-info{
+          float: right;
+          .topbartext{
+            cursor: pointer;
+          }
+          .admin{
+            &::after{
+              content: '';
+            }
+          }
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-bn-bar">
+    <a href="#"><span>红米6A AI双摄 15日早10点首卖 立即预约</span></a>
+  </div>
+  <div class="site-topbar">
+    <div class="container">
+      <div class="topbar-nav">
+        <a href="#" class="topbartext">小米商城</a><!--  
+        --><span class="sep">|</span><!--
+        --><a href="#" class="topbartext">MIUI</a><!--
+        --><span class="sep">|</span><!--
+        --><a href="#" class="topbartext">IoT</a><!--
+        --><span class="sep">|</span><!--
+        --><a href="#" class="topbartext">云服务</a><!--
+        --><span class="sep">|</span><!--
+        --><a href="#" class="topbartext">金融</a><!--
+        --><span class="sep">|</span><!--
+        --><a href="#" class="topbartext">有品</a><!--
+        --><span class="sep">|</span><!--
+        --><a href="#" class="topbartext">小爱开放平台</a><!--
+        --><span class="sep">|</span><!--
+        --><a href="#" class="topbartext">政企服务</a><!--
+        --><span class="sep">|</span><!--
+        --><a href="#" class="topbartext">Select Region</a>
+      </div>
+      <div class="topbar-cart">
+        <div></div>
+      </div>
+      <div class="topbar-info">
+        <span class="topbartext admin">用户名某某</span><!--  
+        --><span class="sep">|</span><!--
+        --><span class="topbartext">消息通知</span><!--
+        --><span class="sep">|</span><!--
+        --><span class="topbartext">我的订单</span>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="less.min.js"></script>
+</html>

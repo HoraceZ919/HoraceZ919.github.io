@@ -1,0 +1,44 @@
+<script>
+    function foo1(a,b,c) {
+      var delta=b**2 - 4*a*c;
+      var s_delta=Math.sqrt(delta)
+      var x1=(-b + s_delta)/(2*a)
+      var x2=(-b - s_delta)/(2*a)
+      if (delta<0) {
+        console.log('无实数根')
+      } else{
+        if (delta>0) {
+          console.log(x1)
+          console.log(x2)
+        } else{
+          console.log(x1)
+        }
+      }
+    }
+    foo1(2,8,-1)
+
+
+
+
+    function foo2(a,b,c,d,e,f) {
+      var numerator1=c*e-b*f
+      var denominator1=a*e-b*d
+      var numerator2=c*d-a*f
+      var denominator2=b*d-a*e
+      var x=numerator1/denominator1
+      var y=numerator2/denominator2
+      if (Number.isNaN(numerator1/denominator1)) {
+        console.log('无穷解')
+      } else{
+        if (!isFinite(numerator1/denominator1)) {
+          console.log('无解')
+        } else{
+          console.log('x='+x);
+          console.log('y='+y);
+        }
+      }
+    }
+    foo2(3,5,1,8,-4,7)
+    foo2(1,1,4,2,2,10)
+    foo2(1,1,6,2,2,12)
+</script>
