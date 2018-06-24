@@ -1,0 +1,13 @@
+<script>
+  function gcd(p,q){
+    var r;
+    if (q==0) {
+      return p
+    } else{
+      r=p%q
+      return gcd(q,r)
+    }
+  }
+  var x=gcd(10,20);
+  console.log(x);
+</script>
