@@ -49,7 +49,7 @@
     var c=Number(prompt('请重新输入c:'))
     continue
   }
-  console.log((a+b)/c)
+  console.log(((a+b)/c))
 </script>
 
 
@@ -61,7 +61,7 @@
     var divisor=Number(prompt('请重新输入除数：'))
     continue
   }
-  console.log(parseInt(dividend/divisor),dividend%divisor)
+  console.log(parseInt(dividend/divisor)+' '+(dividend%divisor))
 </script>
 
 
@@ -93,11 +93,11 @@
 
 <script id="ch0103/07">
   alert('请输入f(x) = ax3 + bx2 + cx + d中的a,b,c,d,x')
+  var x=Number(prompt('请输入x:'))
   var a=Number(prompt('请输入a:'))
   var b=Number(prompt('请输入b:'))
   var c=Number(prompt('请输入c:'))
   var d=Number(prompt('请输入d:'))
-  var x=Number(prompt('请输入x:'))
   var result=(a*(x**3)+b*(x**2)+c*x+d)
   console.log(result.toFixed(7))
 </script>
@@ -125,7 +125,9 @@
   var diameter=2*r
   var circumference=2*pi*r
   var area=pi*(r**2)
-  console.log(diameter.toFixed(4),circumference.toFixed(4),area.toFixed(4))
+  console.log(diameter.toFixed(4))
+  console.log(circumference.toFixed(4))
+  console.log(area.toFixed(4))
 </script>
 
 
@@ -142,7 +144,7 @@
   var a=Number(prompt('a:'))
   var b=Number(prompt('b:'))
   var r=a%b
-  console.log(r)
+  console.log(r.toFixed(4))
 </script>
 
 
@@ -271,13 +273,14 @@
 
 <script id="ch0103/20">
   alert('0 <= n < 31')
-  var n=Number(prompt(n:))
+  var n=Number(prompt('n:'))
   while (n < 0 || n >= 31){
     alert('0 <= n < 31')
-    var n=Number(prompt(n:))
+    var n=Number(prompt('n:'))
     continue
   }
-  console.log(2**n)
+  var r=(2**n)
+  console.log(r)
 </script>
 
 
