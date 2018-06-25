@@ -801,12 +801,39 @@
 
 
 <script id="ch0104/19">
-  
+  var n=Number(prompt('屋顶:'))
+  var distance=0
+  var distancetime=0
+  var human=0
+  var humantime=0
+  var time=0
+  var x1=0
+  var y1=0
+  for (var i = 0; i < n; i++) {
+    var x2=Number(prompt('x:'))
+    var y2=Number(prompt('y:'))
+    distance=(distance+Math.sqrt((x1-x2)**2+(y1-y2)**2))
+    x1=x2
+    y1=y2
+    human+=human
+    var human=Number(prompt('人:'))
+  }
+  humantime=(human*1.5)
+  distancetime=(distance/25)
+  time=(humantime+distancetime)
+  console.log(Math.ceil(time))
 </script>
 
 
 <script id="ch0105/20">
-  
+  var h=Number(prompt('h:'))
+  var result=0
+  for (var i = 1; i <= 10; i++) {
+    result+=h
+    h=(h/2)
+    result+=h
+  }
+  console.log(result,h)
 </script>
 
 
@@ -815,3 +842,168 @@
 </script>
 
 
+<script id="sort" sample-input="4 1 7" sample-output="1 4 7" comment="输入三个数，把此三个数按升序输出">
+  var min=Infinity
+  var max=0
+  var middle
+  for (var i = 0; i < 3; i++) {
+    var m=Number(prompt('数值：'))
+    if (m > max) {
+      middle=max
+      max=m
+    }
+    if (m < min) {
+      middle=min
+      min=m
+    }
+  }
+  console.log(min,middle,max)
+</script>
+
+
+<script id="narcissistic " sample-input="153" sample-output="YES" comment="判断一个数是否为水仙花数">
+  var i=Number(prompt'输入一个数：')
+  if (i <= 999) {
+    var one=parseInt(i%10)
+    var two=parseInt(i/10%10)
+    var three=parseInt(i/100%10)
+    if (one**3+two**3+three**3 == i) {
+      console.log('Yes')
+    }
+  }
+  if (i >= 1000 && i <=9999) {
+    var one=parseInt(i%10)
+    var two=parseInt(i/10%10)
+    var three=parseInt(i/100%10)
+    var four=parseInt(i/1000%10)
+    if (one**4+two**4+three**4+four**4 == i) {
+      console.log('Yes')
+    }
+  }
+  if (i >= 10000 && i <=99999) {
+    var one=parseInt(i%10)
+    var two=parseInt(i/10%10)
+    var three=parseInt(i/100%10)
+    var four=parseInt(i/1000%10)
+    var five=parseInt(i/10000%10)
+    if (one**5+two**5+three**5+four**5+five**5 == i) {
+      console.log('Yes')
+    }
+  }
+</script>
+
+
+<script id="narcissistics" sample-input="" sample-output="" comment="找出100到10000以内所有的水仙花数">
+  for (var i = 100; i <= 100000; i++) {
+    if (i <= 999) {
+      var one=parseInt(i%10)
+      var two=parseInt(i/10%10)
+      var three=parseInt(i/100%10)
+      if (one**3+two**3+three**3 == i) {
+        console.log(i)
+      }
+    }
+    if (i >= 1000 && i <=9999) {
+      var one=parseInt(i%10)
+      var two=parseInt(i/10%10)
+      var three=parseInt(i/100%10)
+      var four=parseInt(i/1000%10)
+      if (one**4+two**4+three**4+four**4 == i) {
+        console.log(i)
+      }
+    }
+    if (i >= 10000 && i <=99999) {
+      var one=parseInt(i%10)
+      var two=parseInt(i/10%10)
+      var three=parseInt(i/100%10)
+      var four=parseInt(i/1000%10)
+      var five=parseInt(i/10000%10)
+      if (one**5+two**5+three**5+four**5+five**5 == i) {
+        console.log(i)
+      }
+    }
+  }
+</script>
+
+
+<script id="weekday" sample-input="2018 6" sample-output="5" comment="输入年份与月份，给出该年该月的第一天是星期几">
+  var year=Number(prompt('年'))
+  var month=Number(prompt('月'))
+  var week
+  var day=0
+  for (var begin = 2000; begin < year; begin++) {
+    if (begin%4 == 0 && begin%100 != 0) {
+      day=day+366;
+    } else{
+      day=day+365;
+    }
+    if (begin%100 == 0 && begin%400 == 0) {
+      day=day+366;
+    } else{
+      day=day+365;
+    }         
+  }
+  for (var i = 1; i < month; i++) {
+    if (i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12) {
+      day=day+31
+    }
+    if (i == 4 || i == 6 || i == 9 || i == 11) {
+      day=day+30
+    }
+    if (i == 2) {
+      if (begin%4 == 0 && begin%100 != 0) {
+        day=day+29
+      } else day=day+28
+      if (begin%100 == 0 && begin%400 == 0) {
+        day=day+29
+      } else day=day+28
+    }
+  }
+  week=(day+2)%7
+  console.log(week) 
+</script>
+
+
+<script id="prime" sample-input="7" sample-output="YES" comment="判断一个数是否为素数">  
+  var x=Number(prompt('输入数值：'))
+  var temp=Math.sqrt(x)
+  var result='YES'
+  if (x == 2 || x == 3) {
+      result='YES'
+  }
+  if (x%6 != 1 && x%6 != 5 && x > 3) {
+    result='NO'
+  }
+  if (!(x == 2 || x == 3)) {
+    for (i=5;i<=temp;i+=6) {
+      if (x%i==0||x%(i+2)==0) {
+        result='NO'
+      }
+    }
+  }
+  console.log(result)
+</script>
+
+
+<script id="primes" sample-input="" sample-output="" comment="输出100以内所有的素数">
+  for (var x = 2; x <= 100; x++) {
+    var temp=Math.sqrt(x)
+    var result=true
+    if (x == 2 || x == 3) {
+        result=true
+    }
+    if (x%6 != 1 && x%6 != 5 && x > 3) {
+      result=false
+    }
+    if (!(x == 2 || x == 3)) {
+      for (i=5;i<=temp;i+=6) {
+        if (x%i==0||x%(i+2)==0) {
+          result=false
+        }
+      }
+    }
+    if (result) {
+      console.log(x)
+    }
+  }
+</script>
