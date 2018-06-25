@@ -49,8 +49,10 @@
     var c=Number(prompt('请重新输入c:'))
     continue
   }
-  console.log(((a+b)/c))
+  var result=((a+b)/c)
+  console.log(parseInt(result))
 </script>
+
 
 
 <script id="ch0103/04">
@@ -637,42 +639,164 @@
 
 
 <script id="ch0105/11">
-  
+  var count1=0
+  var count5=0
+  var count10=0
+  var k=Number(prompt('K:'))
+  while (k <=1 || k>=100){
+    var k=Number(prompt('重新输入K:'))
+    continue
+  }
+  for (var i = 1; i <= k; i++) {
+    var m=Number(prompt('第'+i+'个数：'))
+    while (m < 1 || m > 10){
+      var m=Number(prompt('重新输入第'+i+'个数：'))
+      continue
+    }
+    if (m == 1) {
+      count1+=1
+    }
+    if (m == 5) {
+      count5+=1
+    }
+    if (m == 10) {
+      count10+=1
+    }
+  }
+  console.log(count1,count5,count10)
 </script>
 
 
 <script id="ch0105/12">
-  
+  var count=0
+  var n=Number(prompt('N:'))
+  while (n <=0 || n > 100){
+    var n=Number(prompt('N:'))
+    continue
+  }
+  var m=Number(prompt('m:'))
+  for (var i = 1;i <= n; i++) {
+    var e=Number(prompt('第'+i+'个数：'))
+    if (e == m) {
+      count+=1
+    }
+  }
+  console.log(count)
 </script>
 
 
 <script id="ch0105/13">
-  
+  var a=Number(prompt('a:'))
+  while (a < -1000000 || a > 1000000){
+    var a=Number(prompt('重新输入a:'))
+    continue
+  }
+  var n=Number(prompt('n:'))
+  while (n < 1 || n >10000){
+    var n=Number(prompt('重新输入n:'))
+    continue
+  }
+  var result=(a**n)
+  while (result < -1000000 || result > 1000000){
+    var a=Number(prompt('重新输入a:'))
+    var n=Number(prompt('重新输入n:'))
+    var result=(a**n)
+    continue
+  }
+  console.log(result)
 </script>
 
 
 <script id="ch0105/14">
-  
+  var x=Number(prompt('人数：'))
+  while (x < 1 || x > 100){
+    var x=Number(prompt('重新输入人数：'))
+    continue
+  }
+  var n=Number(prompt('年数：'))
+  while (n < 1 || n > 100){
+    var n=Number(prompt('重新输入年数：'))
+    continue
+  }
+  for (var i = 0; i < n; i++) {
+    x=(x*1.001)
+  }
+  console.log(x.toFixed(4))
 </script>
 
 
 <script id="ch0105/15">
-  
+  var r=Number(prompt('R:'))
+  while (r < 0 || r > 20){
+    var r=Number(prompt('重新输入R:'))
+    continue
+  }
+  r=(r/100)
+  var m=Number(prompt('M:'))
+  while (m < 100 || m > 1000000){
+    var m=Number(prompt('重新输入M:'))
+    continue
+  }
+  var y=Number(prompt('Y:'))
+  while (y < 0 || y > 400){
+    var y=Number(prompt('重新输入Y:'))
+    continue
+  }
+  for (var i = 0; i < y; i++) {
+    m=(m*(1+r))
+  }
+  console.log(parseInt(m))
 </script>
 
 
 <script id="ch0105/16">
-  
+  var n=Number(prompt('年薪：'))
+  var k=Number(prompt('价格增长率:'))
+  k=(k/100)
+  var m=200
+  var count=1
+  var nn=n
+  while (n <= m){
+    n+=nn
+    m=(m*(1+k))
+    count++
+    if (count > 20) {
+      break
+    }
+  }
+  if (count <= 20) {
+    console.log(count)
+  } else console.log('Impossible')
 </script>
 
 
 <script id="ch0105/17">
+  var result=0
+  var k=Number(prompt('k:'))
+  while (k < 1 || k > 46){
+    var k=Number(prompt('重新输入k:'))
+  }
+  result=((((1+Math.sqrt(5))/2)**k-((1-Math.sqrt(5))/2)**k)/Math.sqrt(5))
   
+  console.log(result)
 </script>
 
 
 <script id="ch0105/18">
-  
+  var n=Number(prompt('n:'))
+  var p=Number(prompt('总病例数'))
+  var q=Number(prompt('疗效有效的病例数'))
+  var x=(q/p)
+  for (var i = 1; i < n; i++) {
+    var p=Number(prompt('总病例数'))
+    var q=Number(prompt('疗效有效的病例数'))
+    var y=(q/p)
+    if ((y-x) > 0.05) {
+      console.log('better')
+    } else if (((y-x) < 0.05) && ((y-x) > 0)) {
+      console.log('same')
+    } else console.log('worse')
+  }
 </script>
 
 
