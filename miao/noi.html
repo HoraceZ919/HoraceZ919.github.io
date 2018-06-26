@@ -862,7 +862,7 @@
 
 
 <script id="narcissistic " sample-input="153" sample-output="YES" comment="判断一个数是否为水仙花数">
-  var i=Number(prompt'输入一个数：')
+  var i=Number(prompt('输入一个数：'))
   if (i <= 999) {
     var one=parseInt(i%10)
     var two=parseInt(i/10%10)
@@ -1010,4 +1010,69 @@
   if (result == n) {
     console.log('YES')
   } else console.log('NO')
+</script>
+
+
+<script id="complete-numbers" sample-input="" sample-output="" comment="输出10000以内所有的完全数">
+  debugger
+  var result=0
+  for (var i = 6; i <= 10000; i++) {
+    for (var j = 1; j < i; j++) {
+      if (i%j == 0) {
+        result=(result + j)
+      }
+    }
+    if (result == i) {
+      console.log(i)
+    }
+    result=0
+  }
+</script>
+
+
+<script id="lcf&lcm" sample-input="12 9" sample-output="36 3" comment="给定两个数，求它们的最小公倍数和最大公约数">
+  var a=Number(prompt('a:'))
+  var b=Number(prompt('b:'))
+  var n=(a*b)
+  var lcf=Infinity
+  var lcm=0
+  for (var i = 1; i <= a; i++) {
+    for (var j = 1; j <= b; j++) {
+      if ((i*j)%a == 0 && (i*j)%b == 0 && (i*j) < lcf) {
+        lcf=(i*j)
+      }
+    }
+  }
+
+  for (var i = 1; i <= n; i++) {
+    if (a%i == 0 && b%i == 0 && lcm < i) {
+      lcm=i
+    }
+  }
+  console.log(lcf,lcm)
+</script>
+
+
+<script id="7" sample-input="" sample-output="" comment="敲7">
+  var result=false
+  for (var i = 7; i <= 100; i++) {
+    if (i%7 == 0 || parseInt(i%10) == 7) {
+      result=true
+    }
+    if (result) {
+      console.log(i)
+    }
+    result=false
+  }
+</script>
+
+
+<script id="sqrt" sample-input="2" sample-output="1.414" comment="不使用Math.sqrt，求一个非负数的平方根，至少精确到小数点后3位">
+  var n=Number(prompt('n:'))
+  for (var i = 1; i <= n; i=(i+0.001)) {
+    if ((n - (i**2)) <= 0.001) {
+      console.log(i.toFixed(3))
+      break
+    }
+  }
 </script>
