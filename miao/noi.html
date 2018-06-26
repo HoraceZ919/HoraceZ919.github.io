@@ -1069,10 +1069,11 @@
 
 <script id="sqrt" sample-input="2" sample-output="1.414" comment="不使用Math.sqrt，求一个非负数的平方根，至少精确到小数点后3位">
   var n=Number(prompt('n:'))
-  for (var i = 1; i <= n; i=(i+0.001)) {
-    if ((n - (i**2)) <= 0.001) {
-      console.log(i.toFixed(3))
-      break
-    }
+  var count=0
+  var m=n
+  while (count < 100) {
+    count++
+    n=n-(n**2 - m)/(m*n)
   }
+  console.log(n)
 </script>
