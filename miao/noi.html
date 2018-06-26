@@ -868,7 +868,7 @@
     var two=parseInt(i/10%10)
     var three=parseInt(i/100%10)
     if (one**3+two**3+three**3 == i) {
-      console.log('Yes')
+      console.log("YES")
     }
   }
   if (i >= 1000 && i <=9999) {
@@ -877,7 +877,7 @@
     var three=parseInt(i/100%10)
     var four=parseInt(i/1000%10)
     if (one**4+two**4+three**4+four**4 == i) {
-      console.log('Yes')
+      console.log("YES")
     }
   }
   if (i >= 10000 && i <=99999) {
@@ -887,14 +887,14 @@
     var four=parseInt(i/1000%10)
     var five=parseInt(i/10000%10)
     if (one**5+two**5+three**5+four**5+five**5 == i) {
-      console.log('Yes')
+      console.log("YES")
     }
   }
 </script>
 
 
 <script id="narcissistics" sample-input="" sample-output="" comment="找出100到10000以内所有的水仙花数">
-  for (var i = 100; i <= 100000; i++) {
+  for (var i = 100; i <= 10000; i++) {
     if (i <= 999) {
       var one=parseInt(i%10)
       var two=parseInt(i/10%10)
@@ -909,16 +909,6 @@
       var three=parseInt(i/100%10)
       var four=parseInt(i/1000%10)
       if (one**4+two**4+three**4+four**4 == i) {
-        console.log(i)
-      }
-    }
-    if (i >= 10000 && i <=99999) {
-      var one=parseInt(i%10)
-      var two=parseInt(i/10%10)
-      var three=parseInt(i/100%10)
-      var four=parseInt(i/1000%10)
-      var five=parseInt(i/10000%10)
-      if (one**5+two**5+three**5+four**5+five**5 == i) {
         console.log(i)
       }
     }
@@ -1006,4 +996,18 @@
       console.log(x)
     }
   }
+</script>
+
+
+<script id="complete-number" sample-input="6" sample-output="YES" comment="判断一个数是否为完全数">
+  var n=Number(prompt('n:'))
+  var result=0
+  for (var i = 1; i < n; i++) {
+    if (n%i == 0) {
+      result=(result + i)
+    }
+  }
+  if (result == n) {
+    console.log('YES')
+  } else console.log('NO')
 </script>
