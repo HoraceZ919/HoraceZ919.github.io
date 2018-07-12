@@ -41,6 +41,57 @@ var horacez919 = {
     }
   },
 
+
+  flatten:function(array) {
+    var result=[]
+    for (var i = 0, len=array.length; i < len; i++) {
+      if (array[i].length) {
+        for (var j = 0; j < array[i].length; j++) {
+          result.push(array[i][j])
+        }
+      } else result.push(array[i])
+    }
+    return result
+  },
+
+
+  flattenDeep:function(array) {
+    var result=[]
+    function flattenIn(array) {
+      for (var i = 0, len=array.length; i < len; i++) {
+        if (array[i].length) {
+          flattenIn(array[i])
+        } else result.push(array[i])
+      }
+    }
+    flattenIn(array)
+    return result
+  },
+
+
+  flattenDepth:function(array, depth) {
+    var result=[]
+    var count=0
+    function flattenIn(array) {
+      for (var i = 0, len=array.length; i < len; i++) {
+        if (count > depth) {
+          count--
+          break
+        }
+        if (array[i].length) {
+          if (count == depth) {
+            result.push(array[i])
+          }
+          count++
+          flattenIn(array[i])
+        } else result.push(array[i])
+      }
+    }
+    flattenIn(array)
+    return result
+  }，
+
+  
   head:function(array) {
     return array=null?null:array[0]
   },
