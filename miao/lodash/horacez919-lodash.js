@@ -7,6 +7,7 @@ var horacez919 = {
     return result
   },
 
+
   compact:function(nums) {
     var result=[]
     for (var i = 0, len=nums.length; i < len; i++) {
@@ -17,6 +18,20 @@ var horacez919 = {
     return result
   },
 
+
+  concat:function(array, ...values) {
+    values=horacez919.flatten(values)
+    var result=[]
+    for (var i = 0, len=array.length; i < len; i++) {
+      result.push(array[i])
+    }
+    for (var i = 0, len=values.length; i < len; i++) {
+      result.push(values[i])
+    }
+    return result
+  },
+
+
   drop:function(array, num) {
     var result=[]
     var num=num || 1
@@ -25,6 +40,7 @@ var horacez919 = {
     return result
   },
 
+
   dropRight:function(array, num) {
     var result=[]
     var num=num || 1
@@ -32,6 +48,7 @@ var horacez919 = {
     result=array.slice(0, len-num)
     return result
   },
+
 
   fill:function(array, value, start, end) {
     start=start || 0
@@ -89,9 +106,9 @@ var horacez919 = {
     }
     flattenIn(array)
     return result
-  }，
+  },
 
-  
+
   head:function(array) {
     return array=null?null:array[0]
   },
