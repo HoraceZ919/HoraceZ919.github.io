@@ -61,4 +61,9 @@ var HoraceZ919 = {
         }
       }
   }
+
+
+  initial:function(array) {
+    return array=null?null:array.slice(0, array.length-1)
+  }
 }
