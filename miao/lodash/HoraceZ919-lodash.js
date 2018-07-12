@@ -40,4 +40,25 @@ var HoraceZ919 = {
       array[i]=value
     }
   }
+
+  head:function(array) {
+    return array=null?null:array[0]
+  }
+
+  indexOf:function(array, value, index) {
+    index=index || 0
+    if (index < 0) {
+      for (var i = array.length-1; i >= 0; i--) {
+        if (array[i] === value) {
+          return i
+        }
+      }
+    } else {
+        for (var i = index, len=array.length; i < len; i++) {
+          if (array[i] === value) {
+            return i
+          }
+        }
+      }
+  }
 }
